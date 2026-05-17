@@ -1,0 +1,62 @@
+{
+  "tools": [
+    {
+      "name": "consultar_historico_paciente",
+      "description": "Consulta o histórico clínico do paciente incluindo doenças, medicamentos, alergias e informações preventivas.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "paciente_id": {
+            "type": "string",
+            "description": "Identificador único do paciente."
+          }
+        },
+        "required": [
+          "paciente_id"
+        ]
+      }
+    },
+
+    {
+      "name": "verificar_interacoes_medicamentosas",
+      "description": "Verifica possíveis interações medicamentosas entre os medicamentos informados.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "medicamentos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Lista de medicamentos informados pelo paciente."
+          }
+        },
+        "required": [
+          "medicamentos"
+        ]
+      }
+    },
+
+    {
+      "name": "agendar_teleconsulta",
+      "description": "Realiza o agendamento simulado de uma teleconsulta médica.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "especialidade": {
+            "type": "string",
+            "description": "Especialidade médica desejada."
+          },
+
+          "data_preferencial": {
+            "type": "string",
+            "description": "Data preferencial para a consulta."
+          }
+        },
+        "required": [
+          "especialidade"
+        ]
+      }
+    }
+  ]
+}
